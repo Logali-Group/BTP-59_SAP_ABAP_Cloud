@@ -3,21 +3,22 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <DD04V>
-    <ROLLNAME>ZCO_CNTR_TYPE</ROLLNAME>
+    <ROLLNAME>ZDE_CONSUMO</ROLLNAME>
     <DDLANGUAGE>E</DDLANGUAGE>
     <HEADLEN>55</HEADLEN>
     <SCRLEN1>10</SCRLEN1>
     <SCRLEN2>20</SCRLEN2>
     <SCRLEN3>40</SCRLEN3>
-    <DDTEXT>Tipo de contrato</DDTEXT>
-    <REPTEXT>Tipo contrato</REPTEXT>
-    <SCRTEXT_S>Tipo cntr.</SCRTEXT_S>
-    <SCRTEXT_M>Tipo contrato</SCRTEXT_M>
-    <SCRTEXT_L>Tipo contrato</SCRTEXT_L>
+    <DDTEXT>Consumo</DDTEXT>
+    <REPTEXT>Consumo</REPTEXT>
+    <SCRTEXT_S>Consumo</SCRTEXT_S>
+    <SCRTEXT_M>Consumo</SCRTEXT_M>
+    <SCRTEXT_L>Consumo</SCRTEXT_L>
     <DTELMASTER>E</DTELMASTER>
-    <DATATYPE>CHAR</DATATYPE>
-    <LENG>000002</LENG>
-    <OUTPUTLEN>000002</OUTPUTLEN>
+    <DATATYPE>DEC</DATATYPE>
+    <LENG>000004</LENG>
+    <DECIMALS>000002</DECIMALS>
+    <OUTPUTLEN>000005</OUTPUTLEN>
    </DD04V>
   </asx:values>
  </asx:abap>
