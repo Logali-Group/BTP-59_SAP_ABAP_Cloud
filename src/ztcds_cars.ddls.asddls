@@ -14,7 +14,7 @@ define view ztcds_cars
   as select from ztrent_cars as Cars
   association [1]    to ZTCDS_RENTING  as _Rent        on Cars.matricula = _Rent.Matricula
   association [0..*] to ztcds_brands   as _Brands      on Cars.marca = _Brands.Marca
-  association [0..*] to ZTCDS_DET_CUST as _DetCustomer on $projection.Matricula = _DetCustomer.Matricula
+  association [0..*]    to ZTCDS_DET_CUST as _DetCustomer on _DetCustomer.Matricula = Cars.matricula
 {
   key matricula      as Matricula,
       marca          as Marca,
