@@ -3,11 +3,11 @@ annotate view ztcds_cars with
 {
   @UI.facet      : [{id:'DetallesVehiculo', label:'Detalles del Vehiculo', type:#COLLECTION, position:10},
                     {id:'Vehiculo', parentId:'DetallesVehiculo',label:'Detalles',type:#FIELDGROUP_REFERENCE,targetQualifier:'DetallesVehiculo', position:10},
-                    {id:'Clientes', label:'Clientes', type:#LINEITEM_REFERENCE, targetElement:'_Customer', position:10}]
+                    {id:'Clientes', label:'Clientes', type:#LINEITEM_REFERENCE, targetElement:'_DetCustomer', position:10}]
   @UI.fieldGroup : [{qualifier:'DetallesVehiculo', position:10}]
   Matricula;
   @Consumption.valueHelpDefinition : [{entity: {name:'ztcds_brands', element:'Marca'}}]
-  @UI: { lineItem       : [{position:10, importance: #HIGH}],
+  @UI: { lineItem       : [{position:1, importance: #HIGH}],
          selectionField : [{position :10}]}
   Marca;
   @UI: { lineItem: [{position: 20, importance: #HIGH}]}
@@ -37,6 +37,6 @@ annotate view ztcds_cars with
   FechaFabricacion;
   @UI.fieldGroup : [{qualifier:'DetallesVehiculo', position:50}]
   Puertas;
-  @UI.lineItem   : [{position:10, importance:#HIGH}]
-  _Customer;
+  @UI.lineItem   : [{position:90, importance:#HIGH, criticality:'TiempoRenta'}]
+  TiempoRenta;
 }

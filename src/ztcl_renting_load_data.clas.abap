@@ -9,7 +9,10 @@ CLASS ztcl_renting_load_data DEFINITION
   PRIVATE SECTION.
 ENDCLASS.
 
+
+
 CLASS ztcl_renting_load_data IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
 
@@ -20,19 +23,20 @@ CLASS ztcl_renting_load_data IMPLEMENTATION.
 ** BRANDS ***
 
     lt_brands = VALUE #(
-        ( marca = 'ASTON MARTIN' )
-        ( marca = 'AUDI' )
-        ( marca = 'BENTLEY' )
-        ( marca = 'BUGATTI' )
-        ( marca = 'FERRARI' )
-        ( marca = 'FORD' )
-        ( marca = 'HONDA' )
-        ( marca = 'JEEP' )
-        ( marca = 'KIA' )
-        ( marca = 'MERCEDES' )
-        ( marca = 'MINI' )
-        ( marca = 'SEAT' )
-        ( marca = 'VW' ) ).
+        ( marca = 'ASTON MARTIN' url = 'https://www.autobild.es/sites/autobild.es/public/styles/main_element/public/dc/fotos/Aston_Martin-DB9_2013_01.jpg?itok=bGlXq8UF' )
+        ( marca = 'AUDI' url = 'https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_8ca58632abf44d0db6f1b476fd54eec2.jpg')
+        ( marca = 'BENTLEY' url = 'https://www.autobild.es/sites/autobild.es/public/styles/main_element/public/dc/fotos/Bentley-Continental_GT-2018-C01.jpg?itok=_kP_edH4')
+        ( marca = 'BUGATTI' url = 'https://wtfonline.mx/wp-content/uploads/2018/12/buggatti.jpg')
+        ( marca = 'FERRARI' url = 'https://api.ferrarinetwork.ferrari.com/v2/network-content/medias/resize/5dd552852cdb32285a785d2e-line-up-ferrari-sf90-stradale?apikey=9QscUiwr5n0NhOuQb463QEKghPrVlpaF&width=800&height=600')
+        ( marca = 'FORD' url = 'https://www.elsoldemexico.com.mx/deportes/automotriz/1i0d6x-02_2019.png/ALTERNATES/LANDSCAPE_400/02_2019.png')
+        ( marca = 'HONDA' url = 'https://cdn.autobild.es/sites/navi.axelspringer.es/public/styles/480/public/media/image/2017/06/643677-honda-civic-type-r-2017.jpg?itok=pmaP2b_K')
+        ( marca = 'JEEP' url = 'https://s.aolcdn.com/commerce/autodata/images/USC80JES162A021001.jpg')
+        ( marca = 'KIA' url = 'https://www.kia.com/content/dam/kwcms/mx/es/images/vehicles/thumnails_2020/menu_showrooms/Perfil-Home-Stinger.png')
+        ( marca = 'MERCEDES' url = 'https://www.me.mercedes-benz.com.mx/es/passengercars/_jcr_content/image.MQ6.2.2x.20190815083805.png')
+        ( marca = 'MINI' url = 'https://s.aolcdn.com/commerce/autodata/images/USC70MNC091B021001.jpg')
+        ( marca = 'SEAT' url = 'https://www.seat.mx/content/countries/mx/seat-website/es/modelos/ibiza/_jcr_content.resizedViewPort.noscale.rangeMiniature.png')
+        ( marca = 'VW' url = 'https://www.vwimg.com/iris/iris?bkgnd=transparent&fabric=BC&paint=0Q0Q&pov=E06,CGN&quality=100&vehicle=2020_BU32MS_2019_10_27&Resp=png&width=510&crop=20,90,450,232')
+        ( marca = 'BMW' url = 'https://www.bmw.com.mx/content/dam/bmw/common/all-models/3-series/sedan/2018/navigation/bmw-3-series-modellfinder.png') ).
 
     DELETE FROM ztrent_brands.
     INSERT ztrent_brands FROM TABLE @lt_brands.
@@ -125,5 +129,4 @@ CLASS ztcl_renting_load_data IMPLEMENTATION.
     out->write( 'ztrent_customers data inserted successfully!').
 
   ENDMETHOD.
-
 ENDCLASS.

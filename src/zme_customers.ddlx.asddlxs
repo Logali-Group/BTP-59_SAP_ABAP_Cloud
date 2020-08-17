@@ -1,18 +1,11 @@
 @Metadata.layer: #CORE
 annotate view ztcds_customers with
 {
-  @UI.facet : [{id:'DetallesCliente', label:'Cliente', type:#COLLECTION, position:10},
-               {id:'Cliente', parentId:'DetallesCliente', label:'Detalles', type:#FIELDGROUP_REFERENCE, targetQualifier:'DetallesCliente', position:10}]
-  @UI: { lineItem   : [{position : 10, importance: #HIGH}],
-         fieldGroup : [{qualifier:'DetallesCliente', position:10}]}
+
+  @UI: { lineItem   : [{position : 20, importance: #HIGH}]}
   IdDocumento;
-  @UI: { lineItem   : [{position : 20, importance: #HIGH}],
-         fieldGroup : [{qualifier:'DetallesCliente', position:20}]}
+  @UI: { lineItem   : [{position : 30, importance: #HIGH}]}
+  Matricula;
+  @UI: { lineItem   : [{position : 40, importance: #HIGH}]}
   Nombre;
-  @UI: { lineItem   : [{position : 30, importance: #MEDIUM}],
-         fieldGroup : [{qualifier:'DetallesCliente', position:30}]}
-  Apellidos;
-  @UI: { lineItem   : [{position : 40, importance: #MEDIUM}],
-         fieldGroup : [{qualifier:'DetallesCliente', position:40}]}
-  CorreoElectronico;
 }

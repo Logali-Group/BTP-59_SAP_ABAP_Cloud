@@ -15,9 +15,9 @@
     <SCRTEXT_M>Alquilado hasta</SCRTEXT_M>
     <SCRTEXT_L>Alquilado hasta</SCRTEXT_L>
     <DTELMASTER>E</DTELMASTER>
-    <DATATYPE>CHAR</DATATYPE>
+    <DATATYPE>DATS</DATATYPE>
     <LENG>000008</LENG>
-    <OUTPUTLEN>000008</OUTPUTLEN>
+    <OUTPUTLEN>000010</OUTPUTLEN>
    </DD04V>
   </asx:values>
  </asx:abap>
